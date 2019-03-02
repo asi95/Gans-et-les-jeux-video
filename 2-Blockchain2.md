@@ -8,7 +8,7 @@ Les réseaux génératifs adversaires (GAN) sont des algorithmes récents, les a
 ## Transformer Fortnite en PUBG avec CycleGAN
 Nous allons comprendre comment utiliser le CycleGAN, une variance de GAN, dans la traduction d’images et explorer son application aux graphiques des jeux.
 
-![gan1](/Images/fortnite-gif1.gif?style=centerme)
+![gan1](/Images/fortnite-gif1.gif)(style=centerme)
 
 ￼
 
