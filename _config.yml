@@ -8,7 +8,7 @@ title:               Veille technologique
 tagline:             'Avancées technologiques de la Blockchain'
 description:         'Rendu du travail de veille technologique effectuée dans le cadre du MOS : Nouvelles Technologies de l&apos;Information et de la Communication'
 url:                 http://lanyon.getpoole.com
-baseurl:             '/Gans-et-les-jeux-video'
+baseurl:             '/Gans-et-les-jeux-video/'
 paginate:            5
 
 # About/contact
