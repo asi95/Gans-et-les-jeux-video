@@ -2,7 +2,7 @@
 layout: post
 title: Introduction
 ---
-<img src="/Images/intro1.jpg" style = "height:300px" />
+<img src="/Images/intro1.jpg" width="300" height="200"/>
 
 Au cours des dernières années, les dernières avancées dans le domaine de l'intelligence artificielle reposent sur des méthodes d'apprentissage automatique basées sur l'apprentissage de la représentation avec plusieurs couches d'abstraction, également appelées **Deep Learning**. Ces domaines de recherche ont attiré l'attention du public et des médias sur Go, l'ancien jeu de société chinois. Bien que la complexité de Go soit souvent comparée à la complexité de la vie, la machine **AlphaGo** a surpassé *Lee Sedol*, champion du monde de Go, grâce à l’apprentissage par renforcement en profondeur. C’est un fait fascinant que de telles recherches sur l’IA aient été appliquées aux jeux et qu’elles aient attiré l’attention du public.
 
