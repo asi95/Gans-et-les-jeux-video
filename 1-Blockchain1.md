@@ -8,42 +8,42 @@ Un réseau génératif adversaire (GAN) est un type de technique d'apprentissage
 
 Les deux réseaux de neurones qui constituent un GAN sont appelés le générateur et le discriminateur. Le générateur est un type de réseau de neurones de convolution qui créera de nouvelles instances d'un objet, et le discriminateur sera un type de réseau de neurones déconvolutionnel qui déterminera son authenticité ou son appartenance à un jeu de données.
 
-![gan1](/Images/gan1.png?style=centerme)
+![gan1](/Images/gan1.png/)
 
 Les deux entités se font concurrence lors du processus d’entraînement, où leurs pertes se font l’un l’autre pour améliorer les comportements, ce qu’on appelle la rétropropagation. Le but du générateur est de produire une sortie passable sans être attrapé tandis que le but du discriminateur est d’identifier les contrefaçons. Alors que la double boucle de rétroaction continue, le générateur produit une sortie de meilleure qualité et le discriminateur devient plus apte à signaler les imposteurs.
 
 ## Principe :
 La première étape de la création d'un GAN consiste à identifier le résultat final souhaité et à rassembler un jeu de données d'apprentissage initial en fonction de ces paramètres. Ces données sont ensuite randomisées et entrées dans le générateur jusqu'à ce qu'il acquière une précision de base dans la production de sorties. En effet, GAN échantillonne le bruit **z** en utilisant une distribution normale ou uniforme et utilise un générateur de réseau en profondeur **G** pour créer une image **x (x = G (z))**.
 
-![gan2](/Images/gan2.png?style=centerme)
+![gan2](/Images/gan2.png/)
 
 Ensuite, les images générées sont introduites dans le discriminateur avec les points de données réels du concept d'origine. Le discriminateur filtre les informations et renvoie une probabilité comprise entre 0 et 1 pour représenter l'authenticité de chaque image (1 corrélation avec réel et 0 corrélation avec faux).
 
-![gan3](/Images/gan3.png?style=centerme)
+![gan3](/Images/gan3.png/)
 
 Ces valeurs sont ensuite vérifiées manuellement pour vérifier leur succès et répétées jusqu'à ce que le résultat souhaité soit atteint. Les deux réseaux tentent d'optimiser une fonction différente et opposée dans un jeu à somme nulle.
 
 ## Fonction de coût et backpropagation :
 Maintenant, nous allons passer par quelques équations simples. Le discriminateur émet une valeur **D(x)** indiquant le risque que x soit une image réelle. Notre objectif est de maximiser les chances de reconnaître les images réelles en tant qu'images réelles et les images générées en tant que faux, c'est-à-dire le maximum de vraisemblance des données observées. Pour mesurer la perte, nous utilisons une entropie croisée comme dans la plupart des Deep Learning pour une image réelle, **p** (l’étiquette vraie pour les images réelles) est égal à **1**. Pour les images générées, nous inversons l’étiquette (c’est-à-dire une étiquette moins). Donc l'objectif devient:
 
-![gan4](/Images/gan4.png?style=centerme)
+![gan4](/Images/gan4.png/)
 
 où **D(x)** est la probabilité que **D** classe **x** comme une vraie image, et **G(z)** est une image générée par **G** à partie de **z**. Le terme de gauche de la somme correspond donc à optimiser la probabilité qu'une vraie image **x** soit classée vraie et le terme de droite correspond à optimiser la probabilité qu'une image générée **G(z)** ne soit pas classée vraie.
 D’un côté,  le discriminateur **D** essaie de maximiser son taux de réussite. Donc il va faire une ascension de gradient de la fonction du coût:
 
-![gan5](/Images/gan5.png?style=centerme)
+![gan5](/Images/gan5.png/)
 
 Du côté du générateur, sa fonction objective veut que le modèle génère des images avec la plus grande valeur possible de **D(x)** pour tromper le discriminateur :
 
-![gan6](/Images/gan6.png?style=centerme)
+![gan6](/Images/gan6.png/)
 
 Une fois les deux fonctions objectives définies, elles sont apprises conjointement par la descente à gradient alterné. Nous fixons les paramètres du modèle du générateur et effectuons une seule itération de descente de gradient sur le discriminateur en utilisant les images réelles et générées. Ensuite, nous alternons entre les deux réseaux jusqu'à ce que le générateur produise des images de bonne qualité. Le schéma qui suit résume le flux de données et les gradients utilisés pour la rétro-propagation.
 
-![gan7](/Images/gan7.png?style=centerme)
+![gan7](/Images/gan7.png/)
 
 Le pseudo-code ci-dessous rassemble tout et montre comment le GAN est entrainé.
 
-![gan8](/Images/gan8.png?style=centerme)
+![gan8](/Images/gan8.png/)
 
 ## Les bénéfices d’une architecture adversaire :
 * **GAN fonctionne avec nombre de données minimal** : Le premier obstacle à l’entrainement d’un réseau de neurones sur un nouveau sujet est la nécessité d’un vaste pool de jeux de données étiquetées. La création de ce pool de données est un travail monotone et extrêmement fastidieux. Les réseaux génératifs adversaires partent toutefois d'une perspective différente. Les données précieuses sont les données sur lesquelles le réseau apprend, à savoir les données fournies par le réseau génératif. L'ensemble de données réelles auquel le réseau discriminant a accès peut rester relativement petit, par rapport à d'autres méthodes.
