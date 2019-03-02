@@ -15,7 +15,7 @@ Premièrement, l’intelligence artificielle est essentielle aux jeux. Dans les 
 Deuxièmement, Les jeux fournissent un monde simulé où les programmeurs peuvent faire des expériences sans dangers. En effet, Les algorithmes de machine learning apprennent des stratégies de décision dans des environnements incertains et compliqués. Tester ces algorithmes dans des environnements simulés permet aux chercheurs de tirer des leçons de leurs erreurs et de renforcer leurs stratégies. Les simulations doivent refléter le monde réel pour réaliser des tests efficaces, par exemple, tester une intelligence de conduite autonome dans un jeu de course.
 
 ![introduction](/Images/intro3.png?style=centerme)
-
+ 
 Finalement, les GPU. Pour beaucoup d'entre nous, les GPU rappellent les cartes vidéo conçues pour les jeux aux graphismes intensifs. Celles-ci étaient purement facultatives et n’influençaient pas la décision d’achat d’un utilisateur moyen investissant dans un PC ou un serveur. Seuls les amateurs de jeux jouant à des jeux PC populaires tels que *Quake* et *Half-life* ont compris le pouvoir des GPU. Mais à l'ère de l'apprentissage automatique et de l'intelligence artificielle, les GPU ont trouvé un nouvel emplacement qui les rend aussi pertinents que les processeurs. Grâce à la création de GPU de plus en plus puissants, l'apprentissage en profondeur et les réseaux de neurones sont en passe de changer presque tous les aspects de la société, des emplois que nous conduisons aux voitures que nous conduisons jusqu'au diagnostic que nous recevons.
 
 ### Generative adversarial networks :
