@@ -8,14 +8,14 @@ title:               Veille technologique
 tagline:             'Avancées technologiques de la Blockchain'
 description:         'Rendu du travail de veille technologique effectuée dans le cadre du MOS : Nouvelles Technologies de l&apos;Information et de la Communication'
 url:                 http://lanyon.getpoole.com
-baseurl:             '/Veille'
+baseurl:             '/Gans-et-les-jeux-video'
 paginate:            5
 
 # About/contact
 author:
-  name:              Mehdi ElYaakabi
-  url:               https://twitter.com/@mehdi-yaak
-  email:             mehdi.elyaakabi@gmail.com
+  name:              Ahmed SAHRAOUI
+  url:               https://twitter.com/AhmedSA095
+  email:             actionahmed2010@gmail.com
 
 # Custom vars
 version:             1.0.0
