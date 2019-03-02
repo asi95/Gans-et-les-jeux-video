@@ -19,6 +19,7 @@ La première étape de la création d'un GAN consiste à identifier le résultat
 Ensuite, les images générées sont introduites dans le discriminateur avec les points de données réels du concept d'origine. Le discriminateur filtre les informations et renvoie une probabilité comprise entre 0 et 1 pour représenter l'authenticité de chaque image (1 corrélation avec réel et 0 corrélation avec faux).
 
 ![introduction](/Images/gan3.png?style=centerme)
+
 Ces valeurs sont ensuite vérifiées manuellement pour vérifier leur succès et répétées jusqu'à ce que le résultat souhaité soit atteint. Les deux réseaux tentent d'optimiser une fonction différente et opposée dans un jeu à somme nulle.
 
 ## Fonction de coût et backpropagation :
@@ -28,14 +29,19 @@ Maintenant, nous allons passer par quelques équations simples. Le discriminateu
 
 où **D(x)** est la probabilité que **D** classe **x** comme une vraie image, et **G(z)** est une image générée par **G** à partie de **z**. Le terme de gauche de la somme correspond donc à optimiser la probabilité qu'une vraie image **x** soit classée vraie et le terme de droite correspond à optimiser la probabilité qu'une image générée **G(z)** ne soit pas classée vraie.
 D’un côté,  le discriminateur **D** essaie de maximiser son taux de réussite. Donc il va faire une ascension de gradient de la fonction du coût :
+
 ![introduction](/Images/gan5.png?style=centerme)
+
 Du côté du générateur, sa fonction objective veut que le modèle génère des images avec la plus grande valeur possible de **D(x)** pour tromper le discriminateur :
+
 ![introduction](/Images/gan6.png?style=centerme)
 
 Une fois les deux fonctions objectives définies, elles sont apprises conjointement par la descente à gradient alterné. Nous fixons les paramètres du modèle du générateur et effectuons une seule itération de descente de gradient sur le discriminateur en utilisant les images réelles et générées. Ensuite, nous alternons entre les deux réseaux jusqu'à ce que le générateur produise des images de bonne qualité. Le schéma qui suit résume le flux de données et les gradients utilisés pour la rétro-propagation.
 
 ![introduction](/Images/gan7.png?style=centerme)
+
 Le pseudo-code ci-dessous rassemble tout et montre comment le GAN est entrainé.
+
 ![introduction](/Images/gan8.png?style=centerme)
 
 ## Les bénéfices d’une architecture adversaire :
