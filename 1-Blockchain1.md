@@ -4,7 +4,7 @@ title: Generative adversarial networks
 ---
 
 ## Définition :
-Un réseau accusatoire génératif (GAN) est un type de technique d'apprentissage automatique (ML) de l'IA composée de deux réseaux qui se font concurrence dans un cadre de jeu à somme nulle. Les GAN fonctionnent généralement sans supervision et apprennent à reproduire toute distribution de données donnée.
+Un réseau génératif adversaire (GAN) est un type de technique d'apprentissage automatique (ML) de l'IA composée de deux réseaux qui se font concurrence dans un cadre de jeu à somme nulle. Les GAN fonctionnent généralement sans supervision et apprennent à reproduire toute distribution de données donnée.
 
 Les deux réseaux de neurones qui constituent un GAN sont appelés le générateur et le discriminateur. Le générateur est un type de réseau de neurones de convolution qui créera de nouvelles instances d'un objet, et le discriminateur sera un type de réseau de neurones déconvolutionnel qui déterminera son authenticité ou son appartenance à un jeu de données.
 
