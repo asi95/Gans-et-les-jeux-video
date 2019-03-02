@@ -4,8 +4,8 @@
 permalink:           pretty
 
 # Setup
-title:               Veille technologique
-tagline:             'Avancées technologiques de la Blockchain'
+title:               GANs
+tagline:             'Applications dans les jeux vidéo'
 description:         'Rendu du travail de veille technologique effectuée dans le cadre du MOS : Nouvelles Technologies de l&apos;Information et de la Communication'
 url:                 http://lanyon.getpoole.com
 baseurl:             '/veille-GANs/'
