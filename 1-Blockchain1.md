@@ -29,7 +29,7 @@ Maintenant, nous allons passer par quelques équations simples. Le discriminateu
 ![gan4](/Images/gan4.png?style=centerme)
 
 où **D(x)** est la probabilité que **D** classe **x** comme une vraie image, et **G(z)** est une image générée par **G** à partie de **z**. Le terme de gauche de la somme correspond donc à optimiser la probabilité qu'une vraie image **x** soit classée vraie et le terme de droite correspond à optimiser la probabilité qu'une image générée **G(z)** ne soit pas classée vraie.
-D’un côté,  le discriminateur **D** essaie de maximiser son taux de réussite. Donc il va faire une ascension de gradient de la fonction du coût :
+D’un côté,  le discriminateur **D** essaie de maximiser son taux de réussite. Donc il va faire une ascension de gradient de la fonction du coût:
 
 ![gan5](/Images/gan5.png?style=centerme)
 
