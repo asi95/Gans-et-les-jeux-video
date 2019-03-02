@@ -8,7 +8,7 @@ Les réseaux génératifs adversaires (GAN) sont des algorithmes récents, les a
 ## Transformer Fortnite en PUBG avec CycleGAN
 Nous allons comprendre comment utiliser le CycleGAN, une variance de GAN, dans la traduction d’images et explorer son application aux graphiques des jeux.
 
-![gan1](/Images/fortnite-gif1.gif?style=centerme)
+![gan1](/Images/fortnite-gif1.gif/)
 
 ￼Si vous êtes un joueur, vous devez avoir entendu parler des deux jeux incroyablement populaires de Battle Royale, **Fortnite** et **PUBG**. Ce sont deux jeux très similaires dans lesquels 100 joueurs s'affrontent sur une petite île jusqu'à ce qu'il ne reste qu'un survivant. Si vous préférez le gameplay de Fortnite, mais vous préférez les images plus réalistes de **PUBG**. Cela a fait réfléchir des gens, ils se sont demandés s’ils peuvent avoir des modes graphiques pour les jeux qui leurs permettent de choisir les effets visuels de leur choix sans avoir à compter sur les développeurs de jeux pour leur fournir cette option. Et si un mode était disponible qui pourrait rendre les cadres de **Fortnite** dans les visuels de **PUBG**? Et oui, c’est possible, avec l’examen de différents réseaux de neurones et la découverte de **CycleGAN** qui sont très bons pour le transfert de style d’image, convertir visuellement **Fortnite** en **PUBG** est devenue une réalité. 
 
