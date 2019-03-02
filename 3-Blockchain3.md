@@ -1,53 +1,53 @@
 ---
 layout: page
-title: Blockchain 3.0
+title:  Génération des niveaux de jeu 
 ---
+La création de contenu dans les jeux vidéo est l’une des tâches les plus longues et les plus difficiles pour développer un produit de bonne qualité et produire un contenu intéressant fait souvent appel à des experts en conception. Le contenu d'un jeu vidéo appartient à deux catégories: le contenu fonctionnel est lié aux mécanismes du jeu, contrairement au contenu non fonctionnel, qui sert généralement à des fins esthétiques ou a un effet marginal sur le jeu du point de vue des actions du joueur. Mais un groupe de chercheurs italiens ont montré que les algorithmes **GANs**  permettant d'atteindre les niveaux de jeu vidéo souhaités par les utilisateurs peuvent automatiser des aspects de la conception de jeux. Nous allons parler de leur travail qui porté sur le fameux jeu **DOOM**.
 
-Ce terme désigne des blockchains qui essayent de résoudre les problèmes rencontrés par la plupart des blockchains d’aujourd’hui, à savoir :   
-* Vitesse de transactions lentes
-* Problème de scalabilité
-* Le dévelopment en continue est difficile (nécessite des hard forks)
+![gan1](/Images/doom.png/)
 
-Toute blockchain qui réussira à résoudre ces problème pourra être dénommée une blockchain de 3ème génération. Il est certain que cela nécessitera de l’innovation et donc une évolution de la technologie blockchain. L’une des pistes de recherche concerne les protocols de consensus : Proof of work / Proof of stake / Delegated Proof of stake …
+**DOOM** est un jeu de tir à la première personne sorti en 1993 qui est considéré comme une étape importante dans l’histoire du jeu vidéo et qui a toujours une communauté active de joueurs. Il existe plusieurs collections de niveaux de **DOOM** disponibles gratuitement en ligne, comme le corpus de niveaux de jeu vidéo (**VGLC**), qui comprend les niveaux officiels de **DOOM** et de **DOOM2** représentés dans plusieurs formats, ainsi que les archives de jeux de rôle, un grand référentiel avec plus de 9 000 niveaux de **DOOM** créés  par la communauté.
+Des chercheurs ont récemment formé avec succès des réseaux de neurones pour générer des cartes de niveaux pour Doom qui, selon [un article publié sur le serveur de pré-impression arXiv en avril](https://arxiv.org/pdf/1804.09154.pdf), "se sont révélés intéressants". Les travaux ont été effectués par des chercheurs de l'Université polytechnique de Milan et ont utilisé **Generative Adversarial Networks**, une innovation récente dans le domaine de l'apprentissage en profondeur. Le but ultime de cette technique est de réduire le temps nécessaire au développement de jeux en automatisant des parties de la conception de niveaux et en permettant, sans doute, à l’être humain de faire un travail plus créatif.
+Les réseaux de neurones sont des algorithmes qui «*apprennent*» des modèles dans de grands ensembles de données, puis génèrent de nouvelles prédictions basées sur ce qu'ils ont appris. Les réseaux génératifs adversaires (**GAN**) fournissent un puissant modèle génératif et ont été utilisés pour générer des visages effrayants et même transformer des scènes d'hiver en scènes d'été. Le générateur est «*formé*» aux données d’entrée (dans ce cas, plus de 1 000 cartes **Doom**) et crée de nouveaux niveaux basés sur le modèle appris. L’objectif du générateur est de tromper le côté discriminateur de l’algorithme, qui est satisfait s’il croit qu’une carte **Doom** a été créée par une personne et non par un ordinateur.
+Les chercheurs ont formé deux **GANs**: l'un ne contenait que des images de cartes Doom et l'autre, des images et des attributs tels que la taille, le nombre de pièces, etc. Un ensemble de données contenant plus de 1 000 niveaux Doom a été traité pour extraire les informations les plus vitales. Dans ce cas, des images décrivant les principales caractéristiques du niveau, telles que la zone praticable, la hauteur du sol et les objets, ainsi que les descriptions correspondantes. Le schéma suivant présente l’architecture de GAN utilisée
 
-Ce terme est aussi étroitement lié au <strong>Dapps</strong> ou decentralised applications. Ce sont des applications exécutées sur la blockchain en utilisant des smart contracts et vont donc un pas plus loin que les smart contracts.  
-Naturellement, pour qu’une blockchain puisse faire tourner des dapps, il faut qu’elle puisse résoudre les problèmes énoncés plus haut. Faire fonctionner des dapps nécessite une grande vitesse de transactions, et de supporter un grand nombre d’utilisateurs, ce qui n’est pas le cas aujourd’hui pour Ethereum qui traite une dizaines de transactions par seconde. 
-  
-Le problème est similaire que celui rencontré par le Web 2.0 quelques années auparavant. Dans l’ère du Web 1.0, les utilisateurs pouvaient consulter des sites et voir les informations mais de manière passive. Le Web 2.0 permet la collaboration entre utilisateurs et la création de contenu. Le problème rencontré a été de gérer la scalabilité et l’explosion de données générées par tout ces utilisateurs.  
-Incidemment, les dapps et la blockchain 3.0 peuvent déclencher une autre évolution d’internet vers un Web 3.0 décentralisé et une nouvelle économie du web. Grâce à la blockchain, l’aspect économique jusqu’à présent manquant au web en fera une partie intégrante. 
+![gan1](/Images/wad.png/)
 
-## Decentralised Applications
+Selon l’auteur de l’article, comprendre les caractéristiques pertinentes et les plus appropriées des niveaux était le plus grand défi pour nous. Les niveaux de jeu vidéo ont des structures complexes et vous finissez par avoir un grand nombre de valeurs qui décrivent chaque niveau, le vrai défi étant de choisir celles qui fonctionnent le mieux avec le réseau de neurones. Voici quelques niveaux de **DOOM** générés par l’architecture ci-dessus après 36000 itérations :
 
-La liste des critères à satisfaire pour une Dapp est : 
-* <strong>Open source</strong>, Aucune organisation ne doit détenir une grande partie des tokens qui lui sont associés. Tout les changements sont décidés par la majorité des utilisateurs
-* La data liée à l’application doit être stocké sur la blockchain
-* Nécessite des <strong>tokens</strong> pour bénéficier des services dans l’application. Les mineurs sont récompensés par ces tokens et peuvent choisir de les utiliser pour des services dans l’application ou bien de les vendre. 
+![gan1](/Images/carte.png/)
 
-Comme n’importe quelle autre application, les dapps possèdent une interface front-end. Mais en back-end, leur code fonctionne sur blockchain en utilisant des smart contracts. 
+Le modèle utilisé par les chercheurs de Milan est flexible. Supposons que vous souhaitiez modifier l'environnement généré par l'IA pour améliorer sa reproductibilité. Les auteurs ont expliqué qu’il était facile d’implémenter de tels changements, car la topologie du niveau reposait sur un modèle unique qui pouvait être adapté et intégré au réseau de manière simple et pratique. Selon le journal, cette approche pourrait éventuellement être appliquée à d'autres tâches, telles que la génération de sprites de personnages non jouables, de sorte que vous n'ayez pas à vous soucier des cinq mêmes citadins chaque fois que vous jouez à **Skyrim**.
 
-### Exemples de Dapps :
+# Autre exemple : Abuser les GANs pour créer un pixel art 8 bits:
+Utilisons des modèles génératifs pour faire quelque chose d'un peu plus idiot: créez des illustrations pour des jeux vidéo 8 bits!
 
-* <strong>Golem</strong>: Projet qui permet la location de la capacité de calcul inutilisée des appareils. L’application possède une monnaie pouvant être échangée contre des services (ici, vendre la capacité de calcul). C’est donc un superordinateur décentralisé que le projet essaie de créer. Ce projet peut être une aubaine pour les producteurs de films nécessitant des effets CGI, les rendering peuvent être calculés de manière distribuée sur des ordinateurs des utilisateurs de Golem. 
-* <strong>Brave</strong>: Projet de navigateur web qui repense la notion de publicité. Quelques 60% du temps de chargement d’une page web revient aux pubs. Brave bloque les publicités et les trakers par défaut et promet d’être 2 à 8 fois plus rapide que les navigateurs existants. Il permet aux utilisateurs d’économiser du temps et de l’argent (forfait data économisé sur les pubs). Quelle est donc la valeur économique ajoutée ? Les utilisateurs peuvent gagner de l’argent en choisissant de visionner les pubs ! Ils sont payés par des BAT tokens, et peuvent utiliser ces tokens contre des services sur internet ou pour effectuer des micro-paiements pour encourager leurs créateurs de contenu préférés
-* <strong>Steem</strong> : Une plateforme qui récompense les créateurs de contenu. C’est un réseau social construit sur une blockchain 
-* <strong>MadeSafeCoin</strong> : Location d’espace disque libre 
+![gan1](/Images/gangan.png/)
 
-![blockchain](/Images/Picture10.png/)
-￼
+L'idée est que si nous pouvions générer des captures d'écran de jeux vidéo imaginaires convaincants, nous pourrions copier et coller des morceaux d'art à partir de ces captures d'écran et les utiliser dans notre propre jeu vidéo de style rétro. Les jeux vidéo générés n’ayant jamais existé, ce ne serait même pas voler.
+L'art du jeu vidéo à cette époque était très simple. Étant donné que la **NES** ne disposait que d'une petite quantité de mémoire, Les programmeurs ont dû utiliser de nombreuses astuces pour adapter le jeu à sa mémoire. Pour maximiser l'espace limité, les jeux utilisaient des graphiques basés sur des mosaïques, chaque écran du jeu ne comprenant que quelques mosaïques graphiques répétées (généralement 16 x 16 pixels).
+Par exemple, l’écran de départ de ‘*The Legend of Zelda*’ se compose de seulement 8 mosaïques uniques:
 
-Comme on le remarque, les possibilités sont illimitées. 
+![gan1](/Images/nes1.png/)
+Voici les tuiles de la carte du jeu ‘*The Legend of Zelda*’:
+![gan1](/Images/nes2.png/)
 
-### Comment nait une Dapp ? 
+L’objectif est de créer une feuille de tuiles similaire pour le jeu. De ce fait, on ne se soucie pas vraiment de voir les captures d'écran du jeu qu’on génère avoir l'air complètement réalistes. Au lieu de cela, on cherche simplement les formes et les motifs que nous pouvons utiliser comme carreaux 16 x 16 dans notre jeu - des choses comme des pierres, de l’eau, des ponts, etc. On utilise ensuite ces carreaux pour construire des niveaux de jeu vidéo de style 8 bits. 
 
-Grâce à ce qu’on appelle une <strong>ICO</strong> ou Initial coin offering. C’est une levée de fond où la startup distribue des tokens en échange d’argent. Les investisseurs qui achètent les tokens en confiance en la startup et son potentiel, et croient en la valeur future des tokens. Si le projet réussi, les tokens augmentent en valeur avec la croissance de la base d’utilisateurs. Une ICO est donc très similaire aux IPOs (initial public offering) des entreprises classiques lors de l’introduction en bourse, sans la contrainte d’avoir évolué et d’avoir une certaine taille. Les ICOs peuvent se financer dès leur lancement grâce au cryptomonnaies. 
+Voici à quoi ressemble un échantillon des données d’entraînement originales:
 
-Un grand changement de paradigme se produit avec les Dapps et les ICOs. Une entreprise normale doit satisfaire d’un coté les investisseurs et actionnaires et de l’autre le client, sans sacrifier l’intérêt de l’entreprise ou limiter les perspectives de son évolution. Gérer une entreprise consiste à trouver le bon compromis entre ces éléments.   
-Avec les Dapps, les investisseurs sont des <strong>early adopters</strong> qui s’intéressent à l’application et son utilité. Ils sont donc aussi des clients. Et puisque l’application est décentralisée sur la base des utilisateurs, ils représentent aussi l’entreprise et ont tout intérêt à contribuer à son développement pour augmenter la valeur des tokens en leur possession. Nous avons donc : Client = Entreprise = Investisseur
+![gan1](/Images/nes3.png/)
 
-Les perspectives de la technologie blockchain sont prometteuses, et les applications décentralisées en particulier vont radicalement changer la manière dont on utilise le Web. La question qui reste à se poser est quand est ce que ces changement vont atteindre le grand public ? 
-Vu la vitesse du progrès dans le domaine, ce sera peut être plus tôt que l’on pourrait croire.  
+Après plusieurs itérations d'entraînement, les images commencent à ressembler à des versions cauchemardesques des jeux Nintendo classiques:
 
+![gan1](/Images/nesgif1.gif/)
 
+Le niveau suivant du jeu **Castlevania** est généré en utilisant le **DCGAN** :
 
+![gan1](/Images/nes4.png/)
 
+Ensuite, ajoutons le personnage principal et quelques ennemis de **Castlevania** afin de voir à quoi ressemblerait ce niveau en action avec les éléments de menu ajoutés:
 
+![gan1](/Images/nes5.png/)
+
+Dans l’ensemble, ce travail nous rapproche d’un avenir où de grandes parties de la conception de jeux sont automatisées et où l’être humain gère les tâches les plus créatives.
