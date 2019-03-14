@@ -58,6 +58,12 @@ Le principal inconvénient est que ce réseau de neurones s'est révélé être 
 
 Bien que les résultats semblent vraiment bons, il est clair que nous avons encore beaucoup de chemin à parcourir avant de pouvoir jouer à **Fortnite** avec des graphiques **PUBG** ou au **GTA** avec un graphisme réaliste. Mais une fois que nous serons en mesure de générer des images de résolution supérieure en temps réel à l’aide de ces réseaux, il deviendrait possible à l’avenir de créer des moteurs de modification graphique pour les jeux sans avoir à compter sur les développeurs. Nous pourrions utiliser le style visuel d'un jeu de notre choix et l'appliquer à n'importe quel autre jeu!
 
+## Références :
+* https://arxiv.org/pdf/1703.10593.pdf
+* https://junyanz.github.io/CycleGAN/
+* https://www.theverge.com/2018/12/3/18121198/ai-generated-video-game-graphics-nvidia-driving-demo-neurips
+* https://arxiv.org/pdf/1801.01726.pdf
+* https://www.youtube.com/watch?v=xkLtgwWxrec
 
 
 
