@@ -51,3 +51,12 @@ Ensuite, ajoutons le personnage principal et quelques ennemis de **Castlevania**
 ![gan1](/Images/nes5.png/)
 
 Dans l’ensemble, ce travail nous rapproche d’un avenir où de grandes parties de la conception de jeux sont automatisées et où l’être humain gère les tâches les plus créatives.
+
+## Références :
+* https://arxiv.org/pdf/1804.09154.pdf
+* https://hackaday.com/2018/05/16/neural-networks-using-doom-level-creator-like-its-1993/
+* https://github.com/DanieleLoiacono/DoomGAN
+* https://adamsmith.as/papers/volz_gecco18.pdf
+* http://www.gamasutra.com/blogs/SeungbackShin/20180227/315017/Game_Level_Generation_Using_Neural_Networks.php
+* https://medium.com/@ageitgey/abusing-generative-adversarial-networks-to-make-8-bit-pixel-art-e45d9b96cee7
+
